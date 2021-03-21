@@ -1,0 +1,61 @@
+@import "utils";
+
+.subcategories {
+  margin: 30px 0;
+  flex-wrap: wrap;
+  gap: 30px;
+  display: none;
+  
+  &-active {
+    display: flex;
+  }
+
+  &__card {
+    height: 400px;
+    width: 269px;
+
+    background: #fff;
+    border-radius: 4px;
+    padding: 40px 40px 30px;
+    position: relative;
+
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 24px;
+    text-align: center;
+    font-weight: normal;
+
+    color: $text-color;
+    margin-bottom: 27px;
+  }
+
+  &__button {
+    @include centerPosition;
+    @include noBorder;
+
+    background: $button-color;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    justify-content: center;
+    transition-duration: 0.5s;
+
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    &:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 10px $button-color;
+    }
+  }
+}
+
+@media screen and (max-width: 607px) {
+  .subcategories {
+    justify-content: center;
+  }
+}

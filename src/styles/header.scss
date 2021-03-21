@@ -1,0 +1,170 @@
+@import "utils";
+
+.header {
+  background-color: $bg-color;
+  height: 81px;
+  position: relative;
+
+  &__wrapper {
+    @include centerPosition;
+
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 142px;
+    height: inherit;
+  }
+
+  &__left {
+    display: flex;
+  }
+
+  &__logo {
+    margin-right: 40px;
+    transition-duration: 0.5s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__catalog {
+    @include centerPosition;
+
+    margin-right: 50px;
+  }
+
+  &__search {
+    @include centerPosition;
+  }
+
+  &__text {
+    margin-left: 10px;
+
+    font-size: 16px;
+    line-height: 21px;
+
+    color: $text-color;
+  }
+
+  &__list {
+    @include centerPosition;
+
+    list-style: none;
+  }
+
+  &__icon-close {
+    position: absolute;
+    z-index: 10;
+    top: 27px;
+    right: 37px;
+    cursor: pointer;
+    display: none;
+  }
+
+  &__item {
+    margin-left: 45px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+
+    &:first-of-type {
+      margin: 0;
+    }
+
+    &-open {
+      @include centerPosition;
+
+      &::before {
+        content: "Меню";
+        margin-right: 13px;
+        font-size: 16px;
+        line-height: 21px;
+
+        color: $text-color;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+
+    &__wrapper {
+      padding: 0 50px;
+      border-bottom: 1px solid #e8e8e9;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+
+    &__wrapper {
+      padding: 0 20px;
+    }
+
+    &__text {
+      display: none;
+    }
+
+    &__logo {
+      margin-right: 28px;
+    }
+
+    &__catalog {
+      margin-right: 20px;
+    }
+
+    &__item {
+      margin-left: 28px;
+
+      &:last-child::before {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    height: 58px;
+
+    &__wrapper {
+      padding: 0 15px;
+    }
+
+    &__logo {
+      width: 95px;
+      height: 28px;
+      margin-right: 15px;
+    }
+
+    &__catalog {
+      margin-right: 15px;
+    }
+  
+    &__item {
+      margin-left: 20px;
+
+      &:first-child {
+        display: none;
+      }
+    }
+
+    &__icon {
+      width: 18px;
+      height: 19px;
+
+      &-close {
+        width: 14px;
+        height: 14px;
+        top: 20px;
+        right: 21px;
+      }
+    }
+  }
+}

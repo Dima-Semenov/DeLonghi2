@@ -1,0 +1,89 @@
+@import "utils";
+
+.menu {
+  background-color: $bg-color;
+  display: none;
+
+  &-active {
+    display: block;
+  }
+
+  &__wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 1px 0 65px 140px;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 30px 0 10px;
+
+    color: #8693a2;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    font-size: 26px;
+
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $text-color;
+    display: inline-block;
+
+    &-goods:hover::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      right: 0;
+      background-image: url("../images/photo.png");
+      background-repeat: no-repeat;
+      width: 634px;
+      height: 710px;
+    }
+  
+    &:hover {
+      color: $button-color;
+    }
+    
+    &-active {
+      color: $button-color;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .menu {
+
+    &__link-goods:hover::after {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .menu {
+    padding: 1px 50px 30px;
+
+    &__wrapper {
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    padding: 1px 20px 30px ;
+
+    &__item {
+      font-size: 22px;
+    }
+  }
+}

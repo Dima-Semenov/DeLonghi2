@@ -1,0 +1,119 @@
+@import "utils";
+
+.card {
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+
+  &__wrapper {
+    width: 268px;
+  }
+  
+  &__container {
+    @include spaceBetweenPosition;
+
+    height: 300px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 22px 21px;
+
+    align-items: flex-start;
+    position: relative;
+  }
+
+  &__icons {
+    @include centerPosition;
+    gap: 10px;
+  }
+
+  &__icone {
+    width: 23px;
+    height: 20px;
+
+    margin-right: 10px;
+  }
+
+  &__icon {
+    @include centerPosition;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &:hover {
+      padding: 4px 10px;
+      margin-left: -10px;
+
+      background: #c28005;
+      border-radius: 20px;
+      color: white;
+
+      &::after {
+        content: "Сравнить";
+        font-size: 16px;
+      }
+    }
+
+    &-like:hover::after {
+      content: "В избранное";
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__name {
+    font-size: 14px;
+    margin: 10px 0 5px;
+
+    color: $text-color;
+  }
+
+  &__oldPrice {
+    font-size: 12px;
+    text-decoration-line: line-through;
+
+    color: #8693a2;
+  }
+
+  &__price {
+    font-size: 20px;
+
+    color: $text-color;
+  }
+
+  &__bonus {
+    font-weight: bold;
+    font-size: 12px;
+
+    color: #c28005;
+    margin-top: 5px;
+  }
+
+  &__button {
+    @include noBorder;
+
+    background: $button-color;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition-duration: 0.5s;
+
+    &:hover {
+      box-shadow: 0 0 15px $button-color;
+      transform: scale(1.2);
+    }
+  }
+
+  &__position {
+    @include spaceBetweenPosition;
+
+    align-items: flex-end;
+  }
+}
