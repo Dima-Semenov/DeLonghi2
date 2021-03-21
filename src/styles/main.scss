@@ -1,7 +1,10 @@
-@import "utils";
-@import "fonts";
-@import "typography";
+@import "reset";
+@import "header";
+@import "menu";
+@import "subcategories";
+@import "card";
+@import "fortune";
 
 body {
-  background: $c-gray;
+  font-family: "PT Sans", sans-serif;
 }

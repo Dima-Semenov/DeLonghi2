@@ -1,6 +1,15 @@
-@mixin hover($_property, $_toValue) {
-  transition: #{$_property} 0.3s;
-  &:hover {
-    #{$_property}: $_toValue;
-  }
+@mixin centerPosition {
+  display: flex;
+  align-items: center;
+}
+
+@mixin spaceBetweenPosition {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin noBorder {
+  outline: none;
+  border: none;
+  cursor: pointer;
 }

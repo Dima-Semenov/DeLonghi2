@@ -3,11 +3,369 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Coffee</title>
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
+    <header class="header">
+      <div class="header__wrapper">
+
+        <div class="header__left">
+          <div>
+            <a href="#">
+              <img
+                class="header__logo"
+                src="./images/logo.svg"
+                alt="logo"
+              >
+              </img>
+            </a>
+          </div>
+
+          <div class="header__catalog">
+            <a href="#">
+              <img
+                src="./images/catalog.svg"
+                class="header__icon"
+                alt="catalog"
+              >
+              </img>
+            </a>
+            <p class="header__text">Каталог</p>
+          </div>
+
+          <div class="header__search">
+            <a href="#">
+              <img
+                src="./images/Search.svg"
+                class="header__icon"
+                alt="search"
+              >
+              </img>
+            </a>
+          </div>
+        </div>
+
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="#" >
+                <img
+                  src="./images/Phone (Traced).svg"
+                  class="header__icon"
+                  alt="Phone icon"
+                >
+                </img>
+              </a>
+            </li>
+            <li class="header__item">
+              <a href="#" >
+                <img
+                  src="./images/compare (Traced).svg"
+                  class="header__icon"
+                  alt="icon"
+                >
+                </img>
+              </a>
+            </li>
+            <li class="header__item">
+              <a href="#">
+                <img
+                  src="./images/shope.svg"
+                  class="header__icon"
+                  alt="icon"
+                >
+                </img>
+              </a>
+            </li>
+            <li class="header__item">
+              <a href="#">
+                <img
+                  src="./images/user (Traced).svg"
+                  class="header__icon"
+                  alt="icon"
+                >
+                </img>
+              </a>
+            </li>
+            <li id="menu" class="header__item header__item-open">
+              <a href="#">
+                <img
+                  src="./images/menu.svg"
+                  class="header__icon"
+                  alt="icon"
+                >
+                </img>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <img
+          id="close"
+          alt="close icon"
+          src="./images/close.svg"
+          class="header__icon header__icon-close"
+        >
+        </img>
+      </div>
+    </header>
+
+    <section class="menu">
+      <div class="menu__wrapper">
+
+        <div class="menu__goods">
+          <h3 class="menu__title">Наши товары</h3>
+          <nav>
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link menu__link-goods" href="#">
+                  <p class="menu__text">Автоматические кофемашины</p>
+                </a>
+              </li>
+
+              <li class="menu__item">
+                <a class="menu__link menu__link-goods" href="#">
+                  <p class="menu__text">Техника для кухни</p>
+                </a>
+
+                <div class="subcategories">
+                  <div class="subcategories__card">
+                    <h4 class="subcategories__title">
+                      Капсульные кофемашины
+                    </h4>
+                    <img alt="photo" src="./images/subcategories/ECAM_350 2.png"></img>
+                    <button class="subcategories__button">
+                      <img alt="arrow" src="./images/subcategories/w.svg"></img>
+                    </button>
+                  </div>
+
+                  <div class="subcategories__card">
+                    <h4 class="subcategories__title">
+                      Кофемолки
+                    </h4>
+                    <img alt="photo" src="./images/subcategories/Кофемолки.png"></img>
+                    <button class="subcategories__button">
+                      <img alt="arrow" src="./images/subcategories/w.svg"></img>
+                    </button>
+                  </div>
+
+                  <div class="subcategories__card">
+                    <h4 class="subcategories__title">
+                      Кофеварки
+                    </h4>
+                    <img alt="photo" src="./images/subcategories/Кофеварки.png"></img>
+                    <button class="subcategories__button">
+                      <img alt="arrow" src="./images/subcategories/w.svg"></img>
+                    </button>
+                  </div>
+
+                  <div class="subcategories__card">
+                    <h4 class="subcategories__title">
+                      Грили
+                    </h4>
+                    <img alt="photo" src="./images/subcategories/Грили.png"></img>
+                    <button class="subcategories__button">
+                      <img alt="arrow" src="./images/subcategories/w.svg"></img>
+                    </button>
+                  </div>
+
+                  <div class="subcategories__card">
+                    <h4 class="subcategories__title">
+                      Электрочайники и тостеры
+                    </h4>
+                    <img alt="photo" src="./images/subcategories/чайник.png"></img>
+                    <button class="subcategories__button">
+                      <img alt="arrow" src="./images/subcategories/w.svg"></img>
+                    </button>
+                  </div>
+                </div>
+
+              </li>
+
+              <li class="menu__item">
+                <a class="menu__link menu__link-goods" href="#">
+                  <p class="menu__text">Техника для дома</p>
+                </a>
+              </li>
+
+              <li class="menu__item">
+                <a class="menu__link menu__link-goods" href="#">
+                  <p class="menu__text">Аксессуары</p>
+                </a>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+
+        <div class="menu__world">
+          <h3 class="menu__title">Мир De’Longhi</h3>
+          <nav class="menu__nav">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  <p class="menu__text">
+                    Мир De’Longhi
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="menu__support">
+          <h3 class="menu__title">
+            Поддержка и дополнительная информация
+          </h3>
+
+          <nav class="menu__nav">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="#" class="menu__link">
+                  <p class="menu__text">
+                    Telegram-бот
+                  </p>
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">
+                  <p class="menu__text">
+                    Поддержка
+                  </p>
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">
+                  <p class="menu__text">
+                    Сервисные центры
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+
+        <div class="menu__policy">
+          <h3 class="menu__title">
+            Политика конфиденциальности
+          </h3>
+
+          <nav class="menu__nav">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="#" class="menu__link">
+                  <p class="menu__text">
+                    Политика конфиденциальности
+                  </p>
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">
+                  <p class="menu__text">
+                    Политика использования “Cookies”
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="card">
+
+      <div class="card__wrapper">
+
+        <div class="card__container">
+          <div class="card__icons">
+            <div class="card__icon">
+              <img
+                class="card__icone"
+                src="./images/compare (Traced).svg"
+                alt="icon"
+              >
+              </img>
+            </div>
+            <div class="card__icon card__icon-like">
+              <img
+                class="card__icone"
+                src="./images/like.svg"
+                alt="icon like"
+              >
+              </img>
+            </div>
+          </div>
+
+          <img
+            class="card__photo"
+            src="./images/coffee.png"
+            alt="coffee maker"
+          >
+          </img>
+
+          <div>
+            <ul class="card__list">
+              <li>
+                <img alt="top" src="./images/card/popular.svg"></img>
+              </li>
+              <li>
+                <img alt="persent" src="./images/card/persent.svg"></img>
+              </li>
+              <li>
+                <img alt="app" src="./images/card/app.svg"></img>
+              </li>
+              <li>
+                <img alt="gift" src="./images/card/gift.svg"></img>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <p class="card__name">
+            De'Longhi Капельная кофеварка ICM16210.WS
+          </p>
+          <p class="card__oldPrice">
+            35 999 ₽
+          </p>
+
+          <div class="card__position">
+            <div>
+              <p class="card__price">
+                129 990 ₽
+              </p>
+              <p class="card__bonus">
+                +200 бонусов
+              </p>
+            </div>
+            <button class="card__button">
+              <img alt="shop" src="./images/shop_white.svg"></img>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="fortune">
+      <div class="fortune__wrapper">
+        <div class="fortune__back">
+        </div>
+        <div class="fortune__main">
+        </div>
+      </div>
+      <button
+        type="button"
+        id="button"
+        class="fortune__button"
+      >
+        Scroll
+      </button>
+    </section>
+
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
